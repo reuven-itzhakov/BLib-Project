@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" spacing="20" styleClass="root-container" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.client.ExtendTimeController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+    <children>
+      <Label styleClass="title-label" text="Extend Duration of Book" />
+        <TableView fx:id="tableBook" prefHeight="352.0" prefWidth="651.0" styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="columnCheckBox" minWidth="0.0" prefWidth="104.0" styleClass="table-column" text="Select All">
+                    <graphic>
+                        <CheckBox fx:id="checkBoxSelectAll" mnemonicParsing="false" onMouseClicked="#selectAllBtn" styleClass="select-all-checkbox" />
+                    </graphic>
+                </TableColumn>
+                <TableColumn fx:id="columnAuthor" minWidth="8.0" prefWidth="98.0" styleClass="table-column" text="Author" />
+                <TableColumn fx:id="columnTitle" prefWidth="299.0" styleClass="table-column" text="Title" />
+                <TableColumn fx:id="columnDueDate" prefWidth="94.0" styleClass="table-column" text="Due Date" />
+                <TableColumn fx:id="columnErrorMessage" prefWidth="362.0" styleClass="table-column" text="Message" />
+            </columns>
+        </TableView>
+        <HBox alignment="CENTER_RIGHT" spacing="20" styleClass="action-container">
+            <children>
+                <Label fx:id="lblError" styleClass="error-label" textFill="#009600" />
+                <Button fx:id="btnExtend" onAction="#extendBtn" styleClass="primary-button" text="Extend" />
+                <Button fx:id="btnBack" onAction="#backBtn" styleClass="secondary-button" text="Back" />
+            </children>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+        </HBox>
+    </children>
+</VBox>

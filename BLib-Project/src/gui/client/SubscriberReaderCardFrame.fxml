@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="1000.0" spacing="10" styleClass="root-container" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.client.SubscriberReaderCardController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <children>
+      <HBox alignment="CENTER" prefHeight="2.0" prefWidth="1232.0">
+         <children>
+            <Label fx:id="lblTitle" styleClass="title-label" text="Subscriber Jhon Smith">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+        <VBox spacing="5" styleClass="details-section">
+            <children>
+              <HBox alignment="CENTER_LEFT" spacing="10" styleClass="header-row">
+                  <children>
+                      <Label styleClass="header-label" text="Status:" />
+                      <Text fx:id="txtStatus" styleClass="status-text" text="Text">
+                          <font>
+                              <Font name="System Bold" size="12.0" />
+                          </font>
+                      </Text>
+                  </children>
+              </HBox>
+                <HBox spacing="10">
+                    <Label styleClass="details-label" text="ID:" />
+                    <Text fx:id="txtId" styleClass="details-text" text="Text" />
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+                </HBox>
+                <HBox spacing="10">
+                    <Label styleClass="details-label" text="Name:" />
+                    <Text fx:id="txtName" styleClass="details-text" text="Text" />
+                </HBox>
+                <HBox spacing="10">
+                    <Label styleClass="details-label" text="Phone:" />
+                    <Text fx:id="txtPhone" styleClass="details-text" text="Text" />
+                </HBox>
+                <HBox spacing="10">
+                    <Label styleClass="details-label" text="Email:" />
+                    <Text fx:id="txtEmail" styleClass="details-text" text="Text" />
+               <HBox alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="178.0" HBox.hgrow="ALWAYS">
+                  <children>
+                         <Button fx:id="btnHistory" onAction="#historyBtn" styleClass="primary-button" text="See History Of Subscriber" />
+                  </children>
+               </HBox>
+                </HBox>
+            </children>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+        </VBox>
+        <TableView fx:id="tableBook" styleClass="subscriber-table" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="columnCheckBox" prefWidth="91.0" text="Select All">
+                    <graphic>
+                        <CheckBox fx:id="checkBoxSelectAll" onMouseClicked="#selectAllBtn" styleClass="checkbox-select-all" />
+                    </graphic>
+                </TableColumn>
+                <TableColumn fx:id="columnBookId" prefWidth="56.0" text="ID" />
+                <TableColumn fx:id="columnTitle" prefWidth="233.0" text="Title" />
+                <TableColumn fx:id="columnAuthor" prefWidth="172.0" text="Author" />
+                <TableColumn fx:id="columnDueDate" prefWidth="119.0" text="Due Date" />
+                <TableColumn fx:id="columnErrorMessage" prefWidth="308.0" text="Message" />
+            </columns>
+            <placeholder>
+                <Label fx:id="lblTable" styleClass="table-placeholder" text="" />
+            </placeholder>
+        </TableView>
+        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="footer-row">
+            <children>
+                <Button fx:id="btnExtend" onAction="#extendBtn" styleClass="primary-button" text="Extend" />
+                <Label styleClass="footer-label" text="Number of days to extend:" />
+                <ChoiceBox fx:id="choiceBoxDays" prefWidth="150.0" styleClass="choice-box" />
+                <Label fx:id="lblError" styleClass="error-label" text="" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="19.0" HBox.hgrow="ALWAYS">
+               <children>
+                      <Button fx:id="btnBack" onAction="#backBtn" styleClass="secondary-button" text="Back" />
+               </children>
+            </HBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" spacing="20" styleClass="root-container"  xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.client.SubscriberClientGUIController">
+    <children>
+      <VBox alignment="CENTER" maxWidth="1200.0" prefHeight="100.0" prefWidth="335.0" spacing="10" style="-fx-border-radius: 0; -fx-background-radius: 0;" styleClass="info-box">
+         <children>
+              <Label fx:id="lblTitle" styleClass="title-label" text="Welcome, Subscriber!" />
+         </children>
+      </VBox>
+        <VBox alignment="CENTER" maxWidth="400.0" minWidth="300.0" prefHeight="100.0" prefWidth="200.0" spacing="10" styleClass="info-box">
+            <children>
+                <Label fx:id="lblName" styleClass="info-label" text="Name: John Doe" />
+                <Label fx:id="lblId" styleClass="info-label" text="Subscriber ID: 123456" />
+            </children>
+         <VBox.margin>
+            <Insets left="50.0" right="50.0" top="50.0" />
+         </VBox.margin>
+        </VBox>
+      <VBox alignment="CENTER" maxWidth="400.0" prefHeight="166.0" prefWidth="337.0" spacing="10.0" styleClass="info-box">
+         <children>
+              <VBox alignment="CENTER" spacing="15.0">
+                  <children>
+                      <HBox alignment="CENTER" spacing="20">
+                          <children>
+                              <Button fx:id="btnExtendTime" onAction="#extendTimeBtn" styleClass="button" text="Extend Borrow" />
+                              <Button fx:id="btnUpdateDetails" onAction="#updateDetailsBtn" styleClass="button" text="Update Details" />
+                          </children>
+                      </HBox>
+                      <HBox alignment="CENTER" spacing="20">
+                          <children>
+                              <Button fx:id="btnSearch" onAction="#searchBtn" styleClass="button" text="Search Book" />
+                              <Button fx:id="btnViewHistory" onAction="#viewHistoryBtn" styleClass="button" text="View History" />
+                          </children>
+                      </HBox>
+                  </children>
+              </VBox>
+              <Button fx:id="btnBack" onAction="#backBtn" styleClass="button-secondary" text="Log Out" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" left="50.0" right="50.0" />
+         </VBox.margin>
+      </VBox>
+    </children>
+</VBox>

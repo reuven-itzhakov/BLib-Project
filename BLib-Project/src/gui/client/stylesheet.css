@@ -1,0 +1,107 @@
+.root-container {
+    -fx-background-color: linear-gradient(to left bottom, #e0f7fa, #80deea);
+}
+
+.auth-container {
+    -fx-padding: 20;
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 0 50 50 0;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0, 0);
+}
+
+.text-field {
+    -fx-pref-width: 200;
+    -fx-padding: 5 10 5;
+    -fx-font-size: 14px; /* was 12px */
+    -fx-background-radius: 50;
+    -fx-border-radius:50 ;
+}
+
+.button {
+    -fx-background-color: #0078d4;
+    -fx-text-fill: white;
+    -fx-font-size: 14px; /* was 12px */
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-border-width: 0;
+}
+
+.button:hover {
+    -fx-background-color: #005fa3;
+}
+
+.button-secondary {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px; /* was 12px */
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.button-secondary:hover {
+    -fx-background-color: #bdbdbd;
+}
+
+.title-label {
+    -fx-font-size: 24px; /* was 20px */
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.info-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.5, 0, 0);
+}
+
+.info-text {
+    -fx-font-size: 16px; /* was 14px */
+    -fx-fill: #555555;
+    -fx-font-style: italic;
+}
+
+.info-label {
+    -fx-font-size: 16px; /* was 14px */
+    -fx-text-fill: #444444;
+}
+
+.table-view {
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 20;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-column{
+    -fx-font-size: 16px; /* was 14px */
+    -fx-text-fill: #333333;
+    -fx-border-color: transparent;
+    -fx-border-radius: 20 20 0 0;
+    -fx-background-radius: 20 20 0 0;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .row-cell:selected {
+    -fx-background-color: black;
+    -fx-text-fill: black;
+}
+
+.error-label {
+    -fx-font-size: 14px; /* was 12px */
+    -fx-font-weight: bold;
+}

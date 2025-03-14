@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane onKeyPressed="#handleKey" prefHeight="600.0" prefWidth="1000.0" styleClass="root-container" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.client.AuthenticationController">
+    <children>
+          <HBox>
+              <children>
+                  <VBox alignment="CENTER" minWidth="300.0" prefHeight="505.0" prefWidth="478.0" spacing="15.0" style="-fx-background-radius: 0 55 55 0;" styleClass="auth-container" VBox.vgrow="ALWAYS">
+                      <children>
+                          <TextField fx:id="txtId" maxWidth="200.0" promptText="Enter ID" styleClass="text-field" />
+                          <PasswordField fx:id="txtPassword" maxWidth="200.0" promptText="Enter Password" styleClass="text-field" />
+                          <HBox alignment="CENTER" spacing="10.0">
+                              <children>
+                                  <Button fx:id="btnGuest" focusTraversable="false" onAction="#guestBtn" styleClass="button-secondary" text="Log in as guest" />
+                                  <Button fx:id="btnSend" onAction="#sendBtn" styleClass="button" text="Sign in" />
+                              </children>
+                          </HBox>
+                  <Label id="lblError" fx:id="lblError" styleClass="error-label"/>
+                      </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="505.0" prefWidth="488.0" styleClass="image-container" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                      <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                           <ImageView id="img" fx:id="img" fitHeight="330.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                      </children>
+                  </VBox>
+              </children>
+          </HBox>
+    </children>
+</StackPane>

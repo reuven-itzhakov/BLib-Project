@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" spacing="20" styleClass="root-container"  xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.client.BookTitleController">
+    <children>
+      <VBox alignment="CENTER" maxHeight="600.0" maxWidth="400.0" prefHeight="601.0" prefWidth="400.0">
+         <children>
+            <Label fx:id="lblTitle" styleClass="title-label" text="Book Name" />
+              <VBox spacing="10" styleClass="section-container">
+                  <children>
+                      <HBox spacing="10" styleClass="info-row">
+                          <children>
+                              <Label styleClass="info-label" text="Author Name:" />
+                              <Text fx:id="txtAuthorName" styleClass="info-text" text="Text" />
+                          </children>
+                      </HBox>
+                      <HBox spacing="10" styleClass="info-row">
+                          <children>
+                              <Label styleClass="info-label" text="Genre:" />
+                              <Text fx:id="txtGenre" styleClass="info-text" text="Text" />
+                          </children>
+                      </HBox>
+                  <HBox spacing="10" styleClass="info-row">
+                     <children>
+                            <Label prefHeight="20.0" prefWidth="90.0" styleClass="info-label" text="Description:" />
+                            <Text fx:id="txtDescription" styleClass="info-text" text="Text" wrappingWidth="315.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  </children>
+              </VBox>
+              <TableView fx:id="bookTable" prefHeight="401.0" prefWidth="400.0" styleClass="table-view" VBox.vgrow="ALWAYS">
+                  <placeholder>
+                      <Label fx:id="lblDueDate" styleClass="placeholder-label" text="" />
+                  </placeholder>
+                  <columns>
+                      <TableColumn fx:id="columnBookId" prefWidth="202.0" styleClass="table-column" text="Book ID" />
+                      <TableColumn fx:id="columnShelf" prefWidth="194.0" styleClass="table-column" text="Shelf" />
+                  </columns>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+              </TableView>
+              <HBox alignment="CENTER_RIGHT" spacing="20" styleClass="action-container">
+                  <children>
+                      <Label fx:id="lblError" styleClass="error-label" textFill="RED" />
+                      <Button fx:id="btnOrder" onAction="#orderBtn" styleClass="primary-button" text="Order" />
+                      <Button fx:id="btnBack" onAction="#backBtn" styleClass="secondary-button" text="Back" />
+                  </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+              </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </VBox.margin>
+      </VBox>
+    </children>
+</VBox>

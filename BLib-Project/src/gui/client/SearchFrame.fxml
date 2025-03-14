@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" spacing="20" styleClass="root-container"  xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.client.SearchController">
+    <children>
+      <Label styleClass="title-label"  text="Search" />
+        <HBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <children>
+                <TextField fx:id="txtSearch" onKeyTyped="#searchBtn" promptText="Search by author, title, genre, etc..." styleClass="text-field" />
+                <Button fx:id="btnSearch" onAction="#searchBtn" styleClass="button" text="Search" />
+            </children>
+        </HBox>
+        <Text styleClass="info-text" text="Double click on a row to open the book" />
+        <TableView fx:id="bookTable" prefHeight="313.0" prefWidth="446.0" styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="authorColumn" prefWidth="312.0" styleClass="table-column" text="Author" />
+                <TableColumn fx:id="titleColumn" prefWidth="847.0" styleClass="table-column" text="Title" />
+            </columns>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" top="50.0" />
+         </VBox.margin>
+        </TableView>
+        <HBox alignment="CENTER_RIGHT" prefWidth="936.0" spacing="20">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <children>
+            <Label fx:id="lblError" styleClass="error-label" />
+                <Button fx:id="btnBack" onAction="#backBtn" styleClass="button-secondary" text="Back">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></Button>
+            </children>
+        </HBox>
+    </children>
+</VBox>

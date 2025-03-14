@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" spacing="10.0" styleClass="root-container" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.client.ViewMessagesController">
+   <children>
+      <Label styleClass="title-label" text="Messages" />
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TableView fx:id="messageTable" prefHeight="350.0" prefWidth="401.0" styleClass="message-table" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="messageColumn" prefWidth="1500.0" text="Messages" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0" styleClass="button-container">
+               <Button fx:id="btnClear" mnemonicParsing="false" onAction="#clearAllMessages" text="Clear All Messages" />
+               <Button fx:id="btnBack" mnemonicParsing="false" onAction="#backBtn" text="Back" />
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+</VBox>

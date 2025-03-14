@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" onKeyPressed="#handleKey" prefHeight="600.0" prefWidth="1000.0" spacing="20" styleClass="root-container" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.client.SignUpController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+    <children>
+      <Label styleClass="title-label" text="Sign Up" />
+      <VBox maxWidth="290.0" prefHeight="259.0" prefWidth="290.0">
+         <children>
+                <TextField fx:id="txtId" promptText="Enter ID" styleClass="input-field">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin></TextField>
+                <TextField fx:id="txtName" promptText="Enter Name" styleClass="input-field">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin></TextField>
+                <TextField fx:id="txtPhone" promptText="Enter Phone" styleClass="input-field">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+                <TextField fx:id="txtEmail" promptText="Enter Email" styleClass="input-field">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+              <HBox spacing="10" styleClass="input-row">
+               <children>
+                      <Label fx:id="lblPassword" styleClass="input-label" text="Password:" visible="false" />
+                      <Text fx:id="txtPassword" styleClass="password-text" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+              </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                    <Label fx:id="lblError" styleClass="error-label" textFill="#3ad302">
+                        <font>
+                            <Font name="System Bold" size="12.0" />
+                        </font>
+                    </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+              <HBox alignment="CENTER" spacing="20" styleClass="button-container">
+                  <children>
+                      <Button fx:id="btnSignUp" onAction="#signUpBtn" styleClass="primary-button" text="Sign Up" />
+                      <Button fx:id="btnBack" onAction="#backBtn" styleClass="secondary-button" text="Back" />
+                  </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+              </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </VBox.margin>
+      </VBox>
+    </children>
+</VBox>
